@@ -1,19 +1,24 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Send, MessageCircle, Star, Sparkles, Heart } from "lucide-react"
 
 const Contact = () => {
+  const [isVisible, setIsVisible] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: ""
   })
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -36,20 +41,33 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gray-100">
-      <div className="container">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold">Get In Touch</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/30 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-20 right-20 w-32 h-32 bg-blue-200/20 rounded-full blur-xl animate-pulse" />
+      <div className="absolute bottom-20 left-20 w-24 h-24 bg-purple-200/20 rounded-full blur-xl animate-pulse delay-1000" />
+      <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-indigo-200/20 rounded-full blur-lg animate-pulse delay-500" />
+      <div className="container relative z-10">
+        <div className={`text-center space-y-4 mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/10 to-rose-500/10 border border-pink-200/50 text-sm font-medium text-pink-700 mb-4">
+            <Heart className="w-4 h-4 mr-2" />
+            Let's Connect
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 via-pink-800 to-rose-800 bg-clip-text text-transparent">
+            Get In Touch
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Have a project in mind or just want to chat? I'd love to hear from you!
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div className="space-y-8">
+          {/* Enhanced Contact Information */}
+          <div className={`space-y-8 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
+              <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+                <MessageCircle className="w-6 h-6 text-pink-600" />
+                Let's Connect
+              </h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 I'm always interested in new opportunities and exciting projects. 
                 Whether you have a question, want to collaborate, or just want to say hi, 
@@ -58,136 +76,149 @@ const Contact = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Mail className="h-6 w-6 text-primary" />
+              <div className="flex items-center space-x-4 p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
+                <div className="p-3 bg-pink-100 rounded-lg group-hover:bg-pink-200 transition-colors">
+                  <Mail className="h-6 w-6 text-pink-600 group-hover:animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Email</h4>
-                  <p className="text-muted-foreground">john.doe@example.com</p>
+                  <h4 className="font-semibold text-gray-800">Email</h4>
+                  <p className="text-muted-foreground">noorjanmysore842@gmail.com</p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Phone className="h-6 w-6 text-primary" />
+              <div className="flex items-center space-x-4 p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
+                <div className="p-3 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors">
+                  <Phone className="h-6 w-6 text-blue-600 group-hover:animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Phone</h4>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <h4 className="font-semibold text-gray-800">Phone</h4>
+                  <p className="text-muted-foreground">+91 9008798120</p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <MapPin className="h-6 w-6 text-primary" />
+              <div className="flex items-center space-x-4 p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
+                <div className="p-3 bg-green-100 rounded-lg group-hover:bg-green-200 transition-colors">
+                  <MapPin className="h-6 w-6 text-green-600 group-hover:animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Location</h4>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <h4 className="font-semibold text-gray-800">Location</h4>
+                  <p className="text-muted-foreground">Mysuru, Karnataka, India</p>
                 </div>
               </div>
             </div>
 
-            {/* Social Links */}
+            {/* Enhanced Social Links */}
             <div className="pt-8">
-              <h4 className="font-semibold mb-4">Follow Me</h4>
+              <h4 className="font-semibold mb-4 flex items-center gap-2">
+                <Star className="w-5 h-5 text-yellow-500" />
+                Follow Me
+              </h4>
               <div className="flex space-x-4">
-                <Button variant="outline" size="icon" asChild>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                    <Mail className="h-5 w-5" />
+                <Button variant="outline" size="icon" className="hover:bg-pink-50 hover:border-pink-300 hover:text-pink-600 transition-all duration-300 hover:scale-110 group" asChild>
+                  <a href="https://github.com/mohammed558" target="_blank" rel="noopener noreferrer">
+                    <Mail className="h-5 w-5 group-hover:animate-bounce" />
                   </a>
                 </Button>
-                <Button variant="outline" size="icon" asChild>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <Phone className="h-5 w-5" />
+                <Button variant="outline" size="icon" className="hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all duration-300 hover:scale-110 group" asChild>
+                  <a href="https://www.linkedin.com/in/mohammed-arshad-576b15262?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+ " target="_blank" rel="noopener noreferrer">
+                    <Phone className="h-5 w-5 group-hover:animate-bounce" />
                   </a>
                 </Button>
-                <Button variant="outline" size="icon" asChild>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                    <MapPin className="h-5 w-5" />
+                <Button variant="outline" size="icon" className="hover:bg-green-50 hover:border-green-300 hover:text-green-600 transition-all duration-300 hover:scale-110 group" asChild>
+                  <a href="https://x.com/realdexterrr?t=0ry2ykVCKxVWVG-mzRlCMg&s=09" target="_blank" rel="noopener noreferrer">
+                    <MapPin className="h-5 w-5 group-hover:animate-bounce" />
                   </a>
                 </Button>
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Send a Message</CardTitle>
-              <CardDescription>
-                Fill out the form below and I'll get back to you as soon as possible.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Enhanced Contact Form */}
+          <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+            <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <CardHeader className="pb-4">
+                <CardTitle className="flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-pink-600" />
+                  Send a Message
+                </CardTitle>
+                <CardDescription>
+                  Fill out the form below and I'll get back to you as soon as possible.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-medium text-gray-700">
+                        Name *
+                      </label>
+                      <Input
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="Your name"
+                        required
+                        className="border-gray-200 focus:border-pink-300 focus:ring-pink-200 transition-all duration-300"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-medium text-gray-700">
+                        Email *
+                      </label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="your.email@example.com"
+                        required
+                        className="border-gray-200 focus:border-pink-300 focus:ring-pink-200 transition-all duration-300"
+                      />
+                    </div>
+                  </div>
+
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">
-                      Name *
+                    <label htmlFor="subject" className="text-sm font-medium text-gray-700">
+                      Subject *
                     </label>
                     <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
                       onChange={handleChange}
-                      placeholder="Your name"
+                      placeholder="What's this about?"
                       required
+                      className="border-gray-200 focus:border-pink-300 focus:ring-pink-200 transition-all duration-300"
                     />
                   </div>
+
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">
-                      Email *
+                    <label htmlFor="message" className="text-sm font-medium text-gray-700">
+                      Message *
                     </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
                       onChange={handleChange}
-                      placeholder="your.email@example.com"
+                      placeholder="Tell me about your project..."
+                      rows={6}
                       required
+                      className="border-gray-200 focus:border-pink-300 focus:ring-pink-200 transition-all duration-300"
                     />
                   </div>
-                </div>
 
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">
-                    Subject *
-                  </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="What's this about?"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Message *
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell me about your project..."
-                    rows={6}
-                    required
-                  />
-                </div>
-
-                <Button type="submit" className="w-full">
-                  <Send className="mr-2 h-4 w-4" />
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+                  <Button type="submit" className="w-full bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
+                    <Send className="mr-2 h-4 w-4 group-hover:animate-bounce" />
+                    Send Message
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
