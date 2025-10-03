@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { GraduationCap, Briefcase, Star, Award, Calendar, MapPin, Building } from "lucide-react"
+import { GraduationCap, Briefcase, Star, Award, Calendar, MapPin, Building, Code, Monitor, Cpu, Users, Zap, Database, Globe, Coffee, BookOpen } from "lucide-react"
 
 const Education = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -32,30 +32,30 @@ const Education = () => {
     {
       degree: "Bachelor of Engineering",
       field: "Computer Science",
-      institution: "University",
-      year: "2020 - 2024",
+      institution: "ATME College of Engineering",
+      year: "2021 - 2024",
       location: "India",
-      icon: "🎓",
+      icon: GraduationCap,
       color: "from-blue-500 to-blue-600",
       bgColor: "from-blue-50 to-blue-100"
     },
     {
       degree: "Diploma",
       field: "Computer Science",
-      institution: "Technical Institute",
-      year: "2018 - 2020",
+      institution: "D.Banumaiah's Polytechnic College",
+      year: "2018 - 2021",
       location: "India",
-      icon: "📜",
+      icon: Award,
       color: "from-green-500 to-green-600",
       bgColor: "from-green-50 to-green-100"
     },
     {
       degree: "10th Standard",
-      field: "General Education",
-      institution: "School",
+      field: " High School",
+      institution: "Al-Kareem High School",
       year: "2017 - 2018",
       location: "India",
-      icon: "📚",
+      icon: BookOpen,
       color: "from-purple-500 to-purple-600",
       bgColor: "from-purple-50 to-purple-100"
     }
@@ -63,42 +63,33 @@ const Education = () => {
 
   const experienceData = [
     {
-      company: "Star-Knowledge",
-      position: "Software Developer",
+      company: "Star Knowledge Technology Alliance ",
+      position: "Full Stack Developer",
       duration: "2024 - Present",
-      location: "Remote",
-      description: "Developing full-stack applications using modern technologies and frameworks",
-      icon: "⭐",
+      location: "On-Site",
+      description: "Design, develop, and maintain complete web applications by handling both frontend and backend development. Work with databases, APIs, and modern frameworks to deliver end-to-end solutions.",
+      icon: Star,
       color: "from-yellow-500 to-yellow-600",
       bgColor: "from-yellow-50 to-yellow-100"
     },
+   
     {
-      company: "Housystan",
-      position: "Full Stack Developer",
+      company: "Kodnest Technologies Private Limited",
+      position: "Full Stack Developer Intern",
       duration: "2023 - 2024",
       location: "Remote",
-      description: "Building scalable web applications and managing database systems",
-      icon: "🏠",
-      color: "from-indigo-500 to-indigo-600",
-      bgColor: "from-indigo-50 to-indigo-100"
-    },
-    {
-      company: "KodNest",
-      position: "Software Developer",
-      duration: "2022 - 2023",
-      location: "Remote",
-      description: "Developing enterprise applications and working with various technologies",
-      icon: "💻",
+      description: "Support the development of web applications by working on both frontend and backend components. Gain hands-on experience with modern frameworks, databases, and APIs in real-world projects.",
+      icon: Code,
       color: "from-teal-500 to-teal-600",
       bgColor: "from-teal-50 to-teal-100"
     },
     {
-      company: "AiRobosoft",
-      position: "Junior Developer",
-      duration: "2021 - 2022",
-      location: "Remote",
-      description: "Learning and implementing software development best practices",
-      icon: "🤖",
+      company: "AiROBOSOFT Products And Services ",
+      position: "AIML Intern",
+      duration: "2022 - 2023",
+      location: "On-Site",
+      description: "Assist in developing and training AI and machine learning models, analyzing datasets, and optimizing algorithms. Gain hands-on experience in real-world AI/ML projects under mentorship",
+      icon: Cpu,
       color: "from-pink-500 to-pink-600",
       bgColor: "from-pink-50 to-pink-100"
     }
@@ -115,8 +106,15 @@ const Education = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-200/50 text-sm font-medium text-blue-700 mb-4">
-            <GraduationCap className="w-4 h-4 mr-2" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 mr-2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
             Education & Experience
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 ml-2">
+              <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              <rect width="20" height="14" x="2" y="6" rx="2"/>
+            </svg>
           </div>
           <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4">
             My Journey
@@ -140,14 +138,14 @@ const Education = () => {
               {educationData.map((edu, index) => (
                 <div 
                   key={index}
-                  className={`group relative bg-gradient-to-br ${edu.bgColor} backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-white/50`}
+                  className={`group relative bg-gradient-to-br ${edu.bgColor} backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-white/50 hover:border-white/80`}
                   style={{
                     animation: isVisible ? `fadeIn 0.8s ease-out ${index * 0.2}s both` : 'none'
                   }}
                 >
                   <div className="flex items-start space-x-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${edu.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <span className="text-2xl">{edu.icon}</span>
+                    <div className={`p-3 rounded-xl bg-gradient-to-r ${edu.color} shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300`}>
+                      <edu.icon className="w-6 h-6 text-white drop-shadow-sm" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg font-bold text-gray-800 group-hover:text-gray-900 transition-colors mb-1">
@@ -191,14 +189,14 @@ const Education = () => {
               {experienceData.map((exp, index) => (
                 <div 
                   key={index}
-                  className={`group relative bg-gradient-to-br ${exp.bgColor} backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-white/50`}
+                  className={`group relative bg-gradient-to-br ${exp.bgColor} backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-white/50 hover:border-white/80`}
                   style={{
                     animation: isVisible ? `fadeIn 0.8s ease-out ${index * 0.2}s both` : 'none'
                   }}
                 >
                   <div className="flex items-start space-x-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${exp.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <span className="text-2xl">{exp.icon}</span>
+                    <div className={`p-3 rounded-xl bg-gradient-to-r ${exp.color} shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300`}>
+                      <exp.icon className="w-6 h-6 text-white drop-shadow-sm" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg font-bold text-gray-800 group-hover:text-gray-900 transition-colors mb-1">

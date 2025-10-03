@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code, Palette, Database, Smartphone, Globe, Zap, Star, Award, Users, Coffee } from "lucide-react"
+import { Code, Palette, Database, Smartphone, Globe, Zap, Star, Award, Users, Coffee, FileText, Settings, Workflow, BarChart3, Lock, Wrench, Monitor, Server, Terminal, GitBranch, Cpu, Shield, Rocket, Layers } from "lucide-react"
 import { useState, useEffect } from "react"
 
 const About = () => {
@@ -14,11 +14,11 @@ const About = () => {
 
   const skills = [
     { name: "Frontend Development", icon: Code, description: "React, Next.js, TypeScript", color: "blue" },
-    { name: "UI/UX Design", icon: Palette, description: "Figma, Adobe Creative Suite", color: "purple" },
-    { name: "Backend Development", icon: Database, description: "Node.js, Python, PostgreSQL", color: "green" },
-    { name: "Mobile Development", icon: Smartphone, description: "React Native, Flutter", color: "orange" },
+    // { name: "UI/UX Design", icon: Palette, description: "Figma, Adobe Creative Suite", color: "purple" },
+    { name: "Backend Development", icon: Zap, description: "Node.js, C# .NET,", color: "green" },
+    { name: "Mobile Development", icon: Smartphone, description: "React Native, C# .NET", color: "orange" },
     { name: "Web Technologies", icon: Globe, description: "HTML, CSS, JavaScript", color: "cyan" },
-    { name: "Performance", icon: Zap, description: "Optimization, SEO, Analytics", color: "yellow" },
+     { name: "Database", icon: Database, description: " MySQL, MSSQL, PostgreSQL", color: "yellow" },
   ]
 
   const technologies = [
@@ -55,7 +55,7 @@ const About = () => {
                 Hello! I'm Mohammed Arshad
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm a passionate full-stack developer with over 5 years of experience creating 
+                I'm a passionate full-stack developer with over 2 years of experience creating 
                 digital solutions that make a difference. I specialize in modern web technologies 
                 and have a keen eye for design and user experience.
               </p>
@@ -69,18 +69,18 @@ const About = () => {
             {/* Enhanced Stats */}
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
-                <div className="text-3xl font-bold text-blue-600 group-hover:animate-pulse">50+</div>
+                <div className="text-3xl font-bold text-blue-600 group-hover:animate-pulse">10+</div>
                 <div className="text-sm text-muted-foreground font-medium">Projects Completed</div>
               </div>
               <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
-                <div className="text-3xl font-bold text-purple-600 group-hover:animate-pulse">5+</div>
+                <div className="text-3xl font-bold text-purple-600 group-hover:animate-pulse">2+</div>
                 <div className="text-sm text-muted-foreground font-medium">Years Experience</div>
               </div>
             </div>
           </div>
 
           {/* Enhanced Skills Grid */}
-          <div className={`grid grid-cols-2 gap-4 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+          <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
             {skills.map((skill, index) => {
               const Icon = skill.icon
               const colorClasses = {
@@ -119,9 +119,10 @@ const About = () => {
               <Award className="w-4 h-4 mr-2" />
               Skills Showcase
             </div>
-            <h3 className="text-2xl font-semibold bg-gradient-to-r from-gray-900 via-indigo-800 to-purple-800 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-indigo-800 to-purple-800 bg-clip-text text-transparent">
               My Technical Expertise
-            </h3>
+            </h2>
+            
           </div>
           
           {/* Skills Cards Grid */}
@@ -134,7 +135,7 @@ const About = () => {
                   description: "Enterprise applications, APIs, and microservices",
                   color: "from-purple-500 to-purple-600",
                   bgColor: "from-purple-50 to-purple-100",
-                  icon: "🔷"
+                  icon: Code
                 },
                 { 
                   name: "Next.js", 
@@ -142,7 +143,7 @@ const About = () => {
                   description: "Full-stack React applications with SSR",
                   color: "from-blue-600 to-blue-700",
                   bgColor: "from-blue-50 to-blue-100",
-                  icon: "▲"
+                  icon: Globe
                 },
                 { 
                   name: "React.js", 
@@ -150,15 +151,15 @@ const About = () => {
                   description: "Modern UI components and state management",
                   color: "from-blue-500 to-blue-600",
                   bgColor: "from-blue-50 to-blue-100",
-                  icon: "⚛️"
+                  icon: Zap
                 },
                 { 
                   name: "JavaScript", 
-                  category: "Language",
+                  category: "Frontend and Backend",
                   description: "ES6+, DOM manipulation, and modern features",
                   color: "from-yellow-500 to-yellow-600",
                   bgColor: "from-yellow-50 to-yellow-100",
-                  icon: "🟨"
+                  icon: Code
                 },
                 { 
                   name: "CSS", 
@@ -166,7 +167,7 @@ const About = () => {
                   description: "Responsive design and modern CSS features",
                   color: "from-blue-400 to-blue-500",
                   bgColor: "from-blue-50 to-blue-100",
-                  icon: "🎨"
+                  icon: Palette
                 },
                 { 
                   name: "HTML", 
@@ -174,7 +175,7 @@ const About = () => {
                   description: "Semantic markup and accessibility",
                   color: "from-orange-500 to-orange-600",
                   bgColor: "from-orange-50 to-orange-100",
-                  icon: "🌐"
+                  icon: FileText
                 },
                 { 
                   name: "TailwindCSS", 
@@ -182,7 +183,7 @@ const About = () => {
                   description: "Utility-first CSS framework",
                   color: "from-cyan-500 to-blue-500",
                   bgColor: "from-cyan-50 to-blue-100",
-                  icon: "💨"
+                  icon: Palette
                 },
                 { 
                   name: "ShadCN", 
@@ -190,7 +191,7 @@ const About = () => {
                   description: "Modern component library",
                   color: "from-gray-500 to-gray-600",
                   bgColor: "from-gray-50 to-gray-100",
-                  icon: "🧩"
+                  icon: Layers
                 },
                 { 
                   name: "MSSQL", 
@@ -198,7 +199,7 @@ const About = () => {
                   description: "Microsoft SQL Server management",
                   color: "from-blue-700 to-blue-800",
                   bgColor: "from-blue-50 to-blue-100",
-                  icon: "🗄️"
+                  icon: Database
                 },
                 { 
                   name: "MySQL", 
@@ -206,7 +207,7 @@ const About = () => {
                   description: "Open-source relational database",
                   color: "from-orange-400 to-orange-500",
                   bgColor: "from-orange-50 to-orange-100",
-                  icon: "🐬"
+                  icon: Database
                 },
                 { 
                   name: "PostgreSQL", 
@@ -214,28 +215,28 @@ const About = () => {
                   description: "Advanced open-source database",
                   color: "from-indigo-500 to-indigo-700",
                   bgColor: "from-indigo-50 to-indigo-100",
-                  icon: "🐘"
+                  icon: Database
                 },
                 { 
                   name: "Java", 
-                  category: "Language",
+                  category: "Backend",
                   description: "Object-oriented programming",
                   color: "from-red-500 to-red-600",
                   bgColor: "from-red-50 to-red-100",
-                  icon: "☕"
+                  icon: Coffee
                 }
               ].map((skill, index) => (
                 <div 
                   key={index} 
-                  className={`group relative bg-gradient-to-br ${skill.bgColor} backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-white/50`}
+                  className={`group relative bg-gradient-to-br ${skill.bgColor} backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-white/50 hover:border-white/80`}
                   style={{
                     animation: isVisible ? `fadeIn 0.8s ease-out ${index * 0.1}s both` : 'none'
                   }}
                 >
                   {/* Header */}
                   <div className="flex items-center space-x-4 mb-6">
-                    <div className={`p-4 rounded-2xl bg-gradient-to-r ${skill.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <span className="text-3xl">{skill.icon}</span>
+                    <div className={`p-4 rounded-2xl bg-gradient-to-r ${skill.color} shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300`}>
+                      <skill.icon className="w-8 h-8 text-white drop-shadow-sm" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-xl font-bold text-gray-800 group-hover:text-gray-900 transition-colors mb-2">
@@ -265,49 +266,49 @@ const About = () => {
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 { 
-                  name: "VS Code", 
-                  category: "Tools",
-                  description: "Code Editor",
+                  name: "React Vite", 
+                  category: "Frontend",
+                  description: "Frontend Development",
                   color: "from-blue-500 to-blue-600",
                   bgColor: "from-blue-50 to-blue-100",
-                  icon: "💻"
+                  icon: Zap
                 },
                 { 
                   name: "Git", 
-                  category: "Version Control",
+                  category: "Repository",
                   description: "Version Control",
                   color: "from-orange-500 to-orange-600",
                   bgColor: "from-orange-50 to-orange-100",
-                  icon: "📦"
+                  icon: GitBranch
                 },
                 { 
                   name: "API Development", 
-                  category: "Development",
-                  description: "REST & GraphQL",
+                  category: "API",
+                  description: "REST & API",
                   color: "from-green-500 to-green-600",
                   bgColor: "from-green-50 to-green-100",
-                  icon: "🔌"
+                  icon: Workflow
                 },
                 { 
-                  name: "Full Stack", 
+                  name: "Full Stack Development", 
                   category: "Development",
                   description: "End-to-End Development",
                   color: "from-purple-500 to-purple-600",
                   bgColor: "from-purple-50 to-purple-100",
-                  icon: "🚀"
+                  icon: Rocket
                 }
               ].map((skill, index) => (
                 <div 
                   key={index}
-                  className={`group relative bg-gradient-to-br ${skill.bgColor} backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-white/50`}
+                  className={`group relative bg-gradient-to-br ${skill.bgColor} backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-white/50 hover:border-white/80`}
                   style={{
                     animation: isVisible ? `fadeIn 0.8s ease-out ${(index + 12) * 0.1}s both` : 'none'
                   }}
                 >
                   {/* Header */}
                   <div className="flex items-center space-x-4 mb-6">
-                    <div className={`p-4 rounded-2xl bg-gradient-to-r ${skill.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <span className="text-3xl">{skill.icon}</span>
+                    <div className={`p-4 rounded-2xl bg-gradient-to-r ${skill.color} shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300`}>
+                      <skill.icon className="w-8 h-8 text-white drop-shadow-sm" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-xl font-bold text-gray-800 group-hover:text-gray-900 transition-colors mb-2">
