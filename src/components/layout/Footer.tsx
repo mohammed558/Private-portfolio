@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Linkedin, Mail, Twitter, Code, Sparkles, Star } from "lucide-react"
+import { Github, Linkedin, Mail, Twitter, Sparkles, Star } from "lucide-react"
 
 const Footer = () => {
   return (
@@ -111,7 +111,7 @@ const Footer = () => {
               </Link>
             </div>
             <p className="text-xs text-muted-foreground">
-              Let's build something amazing together!
+              Let&apos;s build something amazing together!
             </p>
           </div>
         </div>
