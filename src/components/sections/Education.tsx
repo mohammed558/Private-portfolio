@@ -120,7 +120,7 @@ const Education = () => {
             My Journey
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From education to professional experience, here's my path in the world of technology
+            From education to professional experience, here&apos;s my path in the world of technology
           </p>
         </div>
 

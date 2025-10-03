@@ -9,7 +9,6 @@ import {
   Code, 
   Palette, 
   Database, 
-  Smartphone, 
   Globe, 
   Zap, 
   GitBranch, 

@@ -48,15 +48,15 @@ const About = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold flex items-center gap-2">
                 <Coffee className="w-6 h-6 text-blue-600" />
-                Hello! I'm Mohammed Arshad
+                Hello! I&apos;m Mohammed Arshad
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm a passionate full-stack developer with over 2 years of experience creating 
+                I&apos;m a passionate full-stack developer with over 2 years of experience creating 
                 digital solutions that make a difference. I specialize in modern web technologies 
                 and have a keen eye for design and user experience.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                When I'm not coding, you can find me exploring new technologies, contributing to 
+                When I&apos;m not coding, you can find me exploring new technologies, contributing to 
                 open-source projects, or sharing knowledge with the developer community. I believe 
                 in continuous learning and staying up-to-date with the latest industry trends.
               </p>

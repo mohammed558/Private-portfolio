@@ -111,7 +111,7 @@ const Footer = () => {
               </Link>
             </div>
             <p className="text-xs text-muted-foreground">
-              Let's build something amazing together!
+              Let&apos;s build something amazing together!
             </p>
           </div>
         </div>
