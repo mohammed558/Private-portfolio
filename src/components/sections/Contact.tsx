@@ -48,7 +48,7 @@ const Contact = () => {
 
       if (response.ok) {
         setSubmitStatus('success')
-        setSubmitMessage("Thank you! Your message has been sent successfully. I'll get back to you soon!")
+        setSubmitMessage("Thank you! Your message has been sent successfully. I&apos;ll get back to you soon!")
         // Reset form
         setFormData({
           name: "",
@@ -84,13 +84,13 @@ const Contact = () => {
               <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/>
               <path d="M3 4h8"/>
             </svg>
-            Let's Connect
+            Let&apos;s Connect
           </div>
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 via-pink-800 to-rose-800 bg-clip-text text-transparent">
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Have a project in mind or just want to chat? I'd love to hear from you!
+            Have a project in mind or just want to chat? I&apos;d love to hear from you!
           </p>
         </div>
 
@@ -100,10 +100,10 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
                 <MessageCircle className="w-6 h-6 text-pink-600" />
-                Let's Connect
+                Let&apos;s Connect
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                I'm always interested in new opportunities and exciting projects. 
+                I&apos;m always interested in new opportunities and exciting projects. 
                 Whether you have a question, want to collaborate, or just want to say hi, 
                 feel free to reach out!
               </p>
@@ -176,7 +176,7 @@ const Contact = () => {
                   Send a Message
                 </CardTitle>
                 <CardDescription>
-                  Fill out the form below and I'll get back to you as soon as possible.
+                  Fill out the form below and I&apos;ll get back to you as soon as possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>

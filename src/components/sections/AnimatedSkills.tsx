@@ -1,9 +1,9 @@
 "use client"
 
 import { motion, useInView } from "framer-motion"
-import { useRef, useState, useEffect } from "react"
+import { useRef, useState, useEffect, useMemo } from "react"
 import { Progress } from "@/components/ui/progress"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { 
   Code, 
@@ -25,7 +25,7 @@ const AnimatedSkills = () => {
   const isInView = useInView(ref, { once: true, margin: "-50px" })
   const [progressValues, setProgressValues] = useState<Record<string, number>>({})
 
-  const skills = [
+  const skills = useMemo(() => [
     {
       category: "Frontend Development",
       icon: Code,
@@ -70,7 +70,7 @@ const AnimatedSkills = () => {
         { name: "CI/CD", level: 78, years: "2+ years" }
       ]
     }
-  ]
+  ], [])
 
   const technologies = [
     { name: "JavaScript", icon: Code, color: "yellow" },
@@ -103,7 +103,7 @@ const AnimatedSkills = () => {
       }, 500)
       return () => clearTimeout(timer)
     }
-  }, [isInView])
+  }, [isInView, skills])
 
   return (
     <section id="skills" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">

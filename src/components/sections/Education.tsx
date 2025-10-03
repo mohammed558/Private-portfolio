@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { GraduationCap, Briefcase, Star, Award, Calendar, MapPin, Building, Code, Monitor, Cpu, Users, Zap, Database, Globe, Coffee, BookOpen } from "lucide-react"
+import { GraduationCap, Briefcase, Star, Award, Calendar, MapPin, Building, Code, Cpu, BookOpen } from "lucide-react"
 
 const Education = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -120,7 +120,7 @@ const Education = () => {
             My Journey
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From education to professional experience, here's my path in the world of technology
+            From education to professional experience, here&apos;s my path in the world of technology
           </p>
         </div>
 

@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Code, Home, User, Briefcase, Mail, Sparkles, Zap, Star, GraduationCap } from "lucide-react"
+import { Menu, X, Home, User, Sparkles, Zap, Star } from "lucide-react"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -144,7 +144,7 @@ const Header = () => {
             >
               <a href="#contact">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Let's Talk
+                Let&apos;s Talk
               </a>
             </Button>
           </div>
@@ -217,7 +217,7 @@ const Header = () => {
                 >
                   <a href="#contact" onClick={() => setIsMenuOpen(false)}>
                     <Zap className="w-4 h-4 mr-2" />
-                    Let's Talk
+                    Let&apos;s Talk
                   </a>
                 </Button>
               </div>

@@ -3,7 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github, Star, Sparkles, Rocket, Zap, Calendar, Users, Smartphone, TrendingUp, ShoppingCart, Car, Dumbbell, Database, Globe, Code2, Shield, Clock } from "lucide-react"
+import { ExternalLink, Github, Star, Zap, Calendar, Users, Smartphone, TrendingUp, ShoppingCart, Car, Dumbbell, Code2 } from "lucide-react"
 import { useState, useEffect } from "react"
 
 const Projects = () => {

@@ -2,8 +2,9 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowDown, Download, Github, Linkedin, Sparkles, Code, Palette, Zap, Star, Rocket, Database } from "lucide-react"
+import { ArrowDown, Download, Github, Linkedin, Sparkles, Code, Zap, Star, Rocket, Database } from "lucide-react"
 import { useState, useEffect } from "react"
+import Image from "next/image"
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -51,7 +52,7 @@ const Hero = () => {
             {/* Enhanced Main Heading */}
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-                <span className="block text-gray-900 animate-fade-in">Hi, I'm</span>
+                <span className="block text-gray-900 animate-fade-in">Hi, I&apos;m</span>
                 <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-gradient">
                   Mohammed Arshad
                 </span>
@@ -132,9 +133,11 @@ const Hero = () => {
                     
                     {/* Enhanced main profile circle */}
                     <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-2xl hover:scale-105 transition-all duration-500 group">
-                      <img 
+                      <Image 
                         src="/Profile Pic.png" 
                         alt="Mohammed Arshad" 
+                        width={256}
+                        height={256}
                         className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500" />
