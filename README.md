@@ -1,79 +1,69 @@
-# Mohammed Arshad - Portfolio
+# Portfolio Website
 
-A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
+A modern, responsive portfolio website built with Next.js, ShadCN UI, and Tailwind CSS.
 
-## 🚀 Live Demo
+## Features
 
-[View Live Portfolio](https://your-username.github.io/portfolio)
+- 🎨 Modern, clean design with ShadCN UI components
+- 📱 Fully responsive layout
+- ⚡ Built with Next.js 15 and TypeScript
+- 🎭 Dark mode support
+- 🚀 Optimized for performance
+- 📧 Contact form functionality
+- 🎯 SEO optimized
 
-## ✨ Features
+## Sections
 
-- **Responsive Design**: Works perfectly on all devices
-- **Modern UI**: Clean, professional design with smooth animations
-- **Contact Form**: Functional contact form with email integration
-- **Project Showcase**: Interactive project cards with live demos
-- **Skills Display**: Animated skills section with professional icons
-- **Education & Experience**: Detailed career and education timeline
+- **Hero**: Introduction with call-to-action buttons
+- **About**: Skills, experience, and personal information
+- **Projects**: Showcase of featured and other projects
+- **Contact**: Contact form and social links
 
-## 🛠️ Tech Stack
+## Technologies Used
 
 - **Framework**: Next.js 15
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
+- **UI Components**: ShadCN UI
 - **Icons**: Lucide React
-- **Components**: Radix UI
-- **Animations**: Framer Motion
+- **Fonts**: Geist Sans & Geist Mono
 
-## 📦 Installation
+## Getting Started
 
-1. Clone the repository:
-```bash
-git clone https://github.com/your-username/portfolio.git
-cd portfolio
-```
-
+1. Clone the repository
 2. Install dependencies:
-```bash
-npm install
-```
-
+   ```bash
+   npm install
+   ```
 3. Run the development server:
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+## Customization
 
-## 🚀 Deployment
+### Personal Information
+Update the following files with your information:
+- `src/components/sections/Hero.tsx` - Name, title, and description
+- `src/components/sections/About.tsx` - About text, skills, and stats
+- `src/components/sections/Projects.tsx` - Your projects
+- `src/components/sections/Contact.tsx` - Contact information
+- `src/app/layout.tsx` - SEO metadata
 
-### GitHub Pages (Free)
+### Styling
+- Colors and themes can be customized in `src/app/globals.css`
+- Component styles can be modified in individual component files
+- Tailwind configuration is in `tailwind.config.ts`
+
+## Deployment
+
+The easiest way to deploy is using [Vercel](https://vercel.com):
 
 1. Push your code to GitHub
-2. Go to repository Settings > Pages
-3. Select "GitHub Actions" as source
-4. The site will be automatically deployed at `https://your-username.github.io/portfolio`
+2. Connect your repository to Vercel
+3. Deploy with zero configuration
 
-### Vercel (Recommended)
-
-1. Connect your GitHub repository to Vercel
-2. Deploy with one click
-3. Get a custom domain and automatic deployments
-
-## 📝 Contact Setup
-
-For the contact form to work, you need to set up environment variables:
-
-1. Create `.env.local` file:
-```env
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-app-password
-```
-
-2. Generate Gmail App Password:
-   - Go to Google Account settings
-   - Enable 2-factor authentication
-   - Generate an App Password for "Mail"
-
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
