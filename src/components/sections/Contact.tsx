@@ -37,7 +37,6 @@ const Contact = () => {
     setSubmitMessage("")
 
     try {
-      // Using EmailJS service for form submission
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -48,7 +47,7 @@ const Contact = () => {
 
       if (response.ok) {
         setSubmitStatus('success')
-        setSubmitMessage("Thank you! Your message has been sent successfully. I&apos;ll get back to you soon!")
+        setSubmitMessage("Thank you! Your message has been sent successfully. I'll get back to you soon!")
         // Reset form
         setFormData({
           name: "",
@@ -57,7 +56,9 @@ const Contact = () => {
           message: ""
         })
       } else {
-        throw new Error('Failed to send message')
+        const errorData = await response.json()
+        console.error('Server error:', errorData)
+        throw new Error(errorData.error || 'Failed to send message')
       }
     } catch (error) {
       console.error('Error sending message:', error)
@@ -90,7 +91,7 @@ const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Have a project in mind or just want to chat? I&apos;d love to hear from you!
+            Have a project in mind or just want to chat? I'd love to hear from you!
           </p>
         </div>
 
@@ -100,10 +101,10 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
                 <MessageCircle className="w-6 h-6 text-pink-600" />
-                Let&apos;s Connect
+                Let's Connect
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                I&apos;m always interested in new opportunities and exciting projects. 
+                I'm always interested in new opportunities and exciting projects. 
                 Whether you have a question, want to collaborate, or just want to say hi, 
                 feel free to reach out!
               </p>
@@ -176,7 +177,7 @@ const Contact = () => {
                   Send a Message
                 </CardTitle>
                 <CardDescription>
-                  Fill out the form below and I&apos;ll get back to you as soon as possible.
+                  Fill out the form below and I'll get back to you as soon as possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>

@@ -52,7 +52,7 @@ const Hero = () => {
             {/* Enhanced Main Heading */}
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-                <span className="block text-gray-900 animate-fade-in">Hi, I&apos;m</span>
+                <span className="block text-gray-900 animate-fade-in">Hi, I'm</span>
                 <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-gradient">
                   Mohammed Arshad
                 </span>

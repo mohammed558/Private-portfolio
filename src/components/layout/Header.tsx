@@ -144,7 +144,7 @@ const Header = () => {
             >
               <a href="#contact">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Let&apos;s Talk
+                Let's Talk
               </a>
             </Button>
           </div>
@@ -217,7 +217,7 @@ const Header = () => {
                 >
                   <a href="#contact" onClick={() => setIsMenuOpen(false)}>
                     <Zap className="w-4 h-4 mr-2" />
-                    Let&apos;s Talk
+                    Let's Talk
                   </a>
                 </Button>
               </div>
