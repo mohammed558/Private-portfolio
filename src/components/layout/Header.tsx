@@ -87,9 +87,14 @@ const Header = () => {
                   href={item.href}
                   onClick={(e) => {
                     e.preventDefault()
-                    const element = document.querySelector(item.href)
+                    const element = document.querySelector(item.href) as HTMLElement
                     if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' })
+                      const headerHeight = 80 // Header height in pixels
+                      const elementPosition = element.offsetTop - headerHeight - 20 // Additional 20px offset
+                      window.scrollTo({
+                        top: elementPosition,
+                        behavior: 'smooth'
+                      })
                     }
                   }}
                   className={`group relative flex items-center space-x-2 px-4 py-3 rounded-xl transition-all duration-300 cursor-pointer ${
@@ -180,9 +185,14 @@ const Header = () => {
                     onClick={(e) => {
                       e.preventDefault()
                       setIsMenuOpen(false)
-                      const element = document.querySelector(item.href)
+                      const element = document.querySelector(item.href) as HTMLElement
                       if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' })
+                        const headerHeight = 80 // Header height in pixels
+                        const elementPosition = element.offsetTop - headerHeight - 20 // Additional 20px offset
+                        window.scrollTo({
+                          top: elementPosition,
+                          behavior: 'smooth'
+                        })
                       }
                     }}
                     className={`flex items-center space-x-3 px-3 sm:px-4 py-3 rounded-xl transition-all duration-300 cursor-pointer ${
