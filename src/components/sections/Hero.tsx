@@ -23,7 +23,7 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen relative overflow-hidden pt-0 sm:pt-1 lg:pt-2">
+    <section id="home" className="relative overflow-hidden pt-0 sm:pt-1 lg:pt-2 pb-8 sm:pb-12 lg:pb-16">
       {/* Enhanced Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100 via-transparent to-transparent" />
