@@ -82,3 +82,4 @@ After setup, when someone submits the contact form:
 - ✅ You receive email at noorjanmysore842@gmail.com
 - ✅ Email contains client details and message
 - ✅ You can reply directly to the client's email
+
