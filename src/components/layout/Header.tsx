@@ -82,10 +82,17 @@ const Header = () => {
             {navItems.map((item) => {
               const isActive = activeSection === item.id
               return (
-                <Link
+                <a
                   key={item.id}
                   href={item.href}
-                  className={`group relative flex items-center space-x-2 px-4 py-3 rounded-xl transition-all duration-300 ${
+                  onClick={(e) => {
+                    e.preventDefault()
+                    const element = document.querySelector(item.href)
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' })
+                    }
+                  }}
+                  className={`group relative flex items-center space-x-2 px-4 py-3 rounded-xl transition-all duration-300 cursor-pointer ${
                     isActive 
                       ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg' 
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
@@ -130,7 +137,7 @@ const Header = () => {
                   {isActive && (
                     <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-white rounded-full animate-pulse" />
                   )}
-                </Link>
+                </a>
               )
             })}
           </nav>
@@ -167,15 +174,22 @@ const Header = () => {
               {navItems.map((item) => {
                 const isActive = activeSection === item.id
                 return (
-                  <Link
+                  <a
                     key={item.id}
                     href={item.href}
-                    className={`flex items-center space-x-3 px-3 sm:px-4 py-3 rounded-xl transition-all duration-300 ${
+                    onClick={(e) => {
+                      e.preventDefault()
+                      setIsMenuOpen(false)
+                      const element = document.querySelector(item.href)
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' })
+                      }
+                    }}
+                    className={`flex items-center space-x-3 px-3 sm:px-4 py-3 rounded-xl transition-all duration-300 cursor-pointer ${
                       isActive 
                         ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg' 
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                     }`}
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.icon === 'target' ? (
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`w-5 h-5 ${isActive ? 'animate-pulse' : ''}`}>
@@ -204,7 +218,7 @@ const Header = () => {
                       </svg>
                     )}
                     {isActive && <Star className="w-4 h-4 ml-auto animate-pulse" />}
-                  </Link>
+                  </a>
                 )
               })}
               

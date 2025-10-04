@@ -23,7 +23,7 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-4 sm:pt-8">
+    <section id="home" className="min-h-screen relative overflow-hidden pt-2 sm:pt-4 lg:pt-8">
       {/* Enhanced Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100 via-transparent to-transparent" />
@@ -38,10 +38,10 @@ const Hero = () => {
       {/* Animated grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse" />
 
-      <div className="container relative z-10 py-4 sm:py-8">
+      <div className="container relative z-10 py-2 sm:py-4 lg:py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className={`space-y-4 sm:space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+          <div className={`space-y-2 sm:space-y-4 lg:space-y-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
             {/* Enhanced Badge */}
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-200/50 text-sm font-medium text-blue-700 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 mx-4">
               <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
@@ -50,7 +50,7 @@ const Hero = () => {
             </div>
 
             {/* Enhanced Main Heading */}
-            <div className="space-y-3 sm:space-y-6">
+            <div className="space-y-1 sm:space-y-2 lg:space-y-3">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
                 <span className="block text-gray-900 animate-fade-in">Hi, I&apos;m</span>
                 <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-gradient">
@@ -58,7 +58,7 @@ const Hero = () => {
                 </span>
               </h1>
               
-              <div className="space-y-2 sm:space-y-4">
+              <div className="space-y-1 sm:space-y-2">
                 <p className="text-2xl md:text-3xl font-semibold text-gray-800 flex items-center gap-2">
                   <Rocket className="w-8 h-8 text-blue-600 animate-bounce" />
                   Full Stack Developer
